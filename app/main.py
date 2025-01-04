@@ -6,12 +6,6 @@ from api.routers import user
 
 app = FastAPI()
 
-app.include_router(
-    user.router,
-    prefix="/api/user",
-    tags=["user"]
-)
-
 app.mount("/static", StaticFiles(directory="static"), name="static")
 app.mount("/media", StaticFiles(directory="media"), name="media")
 
