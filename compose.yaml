@@ -46,7 +46,7 @@ services:
       - postgres-fastapi-jupyter-network
   jupyter:
     build:
-      context: ./jupyter
+      context: ./notebooks
       args:
         ENV_YML: "environment.yaml"
         DIR_CONDA: "/opt/conda"
@@ -59,7 +59,7 @@ services:
     ports:
      - "8888:8888"
     volumes:
-     - ./jupyter:/usr/src/app
+     - ./notebooks:/usr/src/app
     tty: true
     stdin_open: true
     depends_on:
