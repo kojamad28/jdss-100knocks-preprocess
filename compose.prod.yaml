@@ -55,7 +55,7 @@ services:
         REQ_TXT: "prod.txt"
     image: kojamad28/jupyter-db-prod
     container_name: jupyterlab
-    command: jupyter lab --ip=0.0.0.0 --allow-root --LabApp.token=''
+    command: mamba run --name db jupyter lab --ip=0.0.0.0 --allow-root --LabApp.token=''
     ports:
      - "8888:8888"
     volumes:
