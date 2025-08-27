@@ -6,8 +6,8 @@ from sqlmodel import SQLModel, Session, create_engine
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-#config = dotenv_values(BASE_DIR / "postgres" / ".env.dev")
-config = dotenv_values(BASE_DIR / "postgres" / ".env")
+#config = dotenv_values(BASE_DIR / "db" / ".env.dev")
+config = dotenv_values(BASE_DIR / "db" / ".env")
 
 DEBUG = config.get("DEBUG", "false").lower() == "true"
 
