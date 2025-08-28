@@ -49,7 +49,6 @@ services:
       context: ./notebooks
       args:
         ENV_YML: "environment.prod.yaml"
-        DIR_CONDA: "/opt/conda"
         VENV: "db"
         REQ_DIR: "requirements/"
         REQ_TXT: "prod.txt"
